@@ -4,9 +4,12 @@ Linguagens diferentes são bem-vindas! Faça sua sugestão via Pull Request (bas
 
 _C++_
 
-Execute: 
+Execute:
+
 `cd grafos-cpp`
+
 `make`
+
 `make run` (ou `make saferun` para executar com valgrind e verificar erros)
 
 Licença MIT

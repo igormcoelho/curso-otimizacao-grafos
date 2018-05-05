@@ -26,7 +26,7 @@ public:
     int n,m;
     in >> n >> m;
     nV = n;
-    nE = m;
+    nE = 0;
     //cout << "lendo (n=" << n << ", m=" << m << ")" << endl;
     matrizAdj.clear();
     for(unsigned i=0; i<nV;++i)
@@ -36,7 +36,17 @@ public:
       int u,v;
       in >> u >> v;
       //cout << "lendo (" << u << "," << v << ")" << endl;
-      matrizAdj[u][v] = matrizAdj[v][u] = true;
+      AdicionarAresta(u,v);
+      AdicionarAresta(v,u);
+    }
+  }
+
+  void AdicionarAresta(int u, int v)
+  {
+    if(!matrizAdj[u][v])
+    {
+      nE++;
+      matrizAdj[u][v] = true;
     }
   }
 
