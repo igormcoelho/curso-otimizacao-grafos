@@ -7,7 +7,7 @@
 
 
 // Classe de Grafo para Matriz de Adjacencias
-class GrafoMA
+class GrafoMA : public Grafo
 {
 public:
   int nV; // n

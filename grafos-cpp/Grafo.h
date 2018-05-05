@@ -9,5 +9,6 @@ class Grafo
 {
 public:
 
+  virtual void AdicionarAresta(int u, int v) = 0;
 
 };
