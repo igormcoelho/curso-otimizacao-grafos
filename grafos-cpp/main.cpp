@@ -3,6 +3,7 @@
 
 #include "Utils.hpp"
 #include "GrafoMA.hpp"
+#include "GrafoLA.hpp"
 
 using namespace std;
 
@@ -18,6 +19,17 @@ int main()
     fG.close();
 
     cout << G << endl;
+
+    // =============================
+
+    GrafoLA G2(5);
+    cout << G2 << endl;
+    fG.open ("grafo1.txt");
+    G2.LerGrafo(fG);
+    fG.close();
+    cout << G2 << endl;
+
+
 
     return 0;
 }

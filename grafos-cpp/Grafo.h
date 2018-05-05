@@ -11,4 +11,6 @@ public:
 
   virtual void AdicionarAresta(int u, int v) = 0;
 
+  virtual void LerGrafo(istream& in) = 0;
+
 };
