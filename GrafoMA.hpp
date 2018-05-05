@@ -2,7 +2,9 @@
 
 #include<vector>
 
+#include "Utils.hpp"
 #include "Grafo.h"
+
 
 // Classe de Grafo para Matriz de Adjacencias
 class GrafoMA
@@ -19,7 +21,14 @@ public:
 
   friend ostream& operator<<(ostream& os, const GrafoMA& G)
   {
-    os << "GrafoMA(nV)";
+    os << "GrafoMA(" << G.nV << "): [" << endl;
+    os << "\t";
+    for(unsigned i=0; i<G.nV; ++i)
+      os << i << ":" << "\t";
+    os << endl;
+    for(unsigned i=0; i<G.nV; ++i)
+      os << i << ": " << G.matrizAdj[i] << endl;
+    os << "]";
     return os;
   }
 

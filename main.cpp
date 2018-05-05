@@ -1,5 +1,6 @@
 #include<iostream>
 
+#include "Utils.hpp"
 #include "GrafoMA.hpp"
 
 using namespace std;
@@ -10,7 +11,5 @@ int main()
     GrafoMA G(5);
 
     cout << G << endl;
-
-    cout << "Terminou com Sucesso!" << endl;
     return 0;
 }
