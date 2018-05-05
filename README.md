@@ -4,7 +4,7 @@ Linguagens diferentes são bem-vindas! Faça sua sugestão via Pull Request (bas
 
 _C++_
 
-Execute: `make`, depois `make run`
+Execute: `make`, depois `make run` (ou `make saferun` para executar com valgrind e verificar erros)
 
 Licença MIT
 
