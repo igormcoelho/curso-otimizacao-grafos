@@ -6,8 +6,7 @@
 #include "Grafo.h"
 
 
-
-// Classes auxiliares para construir lista interna
+// Classe auxiliar para construir lista interna do GrafoLA
 class NoAresta
 {
 public:

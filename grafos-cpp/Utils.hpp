@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Método para impressão automática da classe vector via operator<<
 template<class T>
 ostream& operator<<(ostream& os, const vector<T>& v)
 {
