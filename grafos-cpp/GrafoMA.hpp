@@ -27,7 +27,7 @@ public:
     in >> n >> m;
     nV = n;
     nE = m;
-    cout << "lendo (n=" << n << ", m=" << m << ")" << endl;
+    //cout << "lendo (n=" << n << ", m=" << m << ")" << endl;
     matrizAdj.clear();
     for(unsigned i=0; i<nV;++i)
       matrizAdj.push_back(vector<bool>(nV, false));
@@ -35,7 +35,7 @@ public:
     {
       int u,v;
       in >> u >> v;
-      cout << "lendo (" << u << "," << v << ")" << endl;
+      //cout << "lendo (" << u << "," << v << ")" << endl;
       matrizAdj[u][v] = matrizAdj[v][u] = true;
     }
   }
