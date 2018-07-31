@@ -23,6 +23,7 @@ public:
     const int ntypes = sizeof...(Args);
     vector<void*> vrot(v, nullptr);
     rotulosVertices = vector< vector<void*> >(ntypes, vrot);
+    cout << "num rotulos:" << ntypes << endl;
   }
 
   template<int X>
@@ -32,7 +33,7 @@ public:
   }
 
   template<int X>
-  void setRotuloVertice(int i, typename std::tuple_element<X, std::tuple<Args...> >::type &value)
+  void setRotuloVertice(int i, const typename std::tuple_element<X, std::tuple<Args...> >::type &value)
   {
     rotulosVertices[X][i] = (void*) new typename std::tuple_element<X, std::tuple<Args...> >::type(value);
   }
@@ -59,6 +60,7 @@ typename std::tuple_element<X, std::tuple<Args...> >::type rotularVertice(GrafoR
   return grafo.rotulosVertices[X][i];
 }
 
+// param 1: GrafoRotuladoMA, param2: indice/nome do rotulo, param3: tipo/valor do rótulo
 template<int X, typename... Args>
 void rotularVertice(GrafoRotuladoMA<Args...>& grafo, int i, typename std::tuple_element<X, std::tuple<Args...> >::type value)
 {
